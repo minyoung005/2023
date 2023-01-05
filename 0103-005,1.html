@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pure CSS Horizontal Tabs2 with CSS3</title>
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic">
+<!--[if lt IE 9]>
+<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<!-- http://designscrazed.org/html5-css3-accordion-tabs/ -->
+<style>
+    body {
+        margin: 20px;
+        padding: 20px;
+        font-family: Arial, Helvetica, sans-serif;
+        color: #ccc;
+        background: #f1f1f1;
+    }
+
+    ul {
+        list-style: none;
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    nav {
+        margin-top: 30px;
+    }
+
+    nav ul {
+        position: relative;
+        float: none;
+        margin: 0;
+        width: 500px;
+        text-align: left;
+    }
+
+    nav ul li {
+        float: left;
+    }
+    
+    nav ul input[type="radio"] {
+        position: absolute;
+        left: -9999px;
+    }
+
+    nav ul label {
+        display: block;
+        position: relative;
+        top: 10px;
+        padding: 10px 25px;
+        font-size: 0.875em;
+        background: #333;
+        cursor: pointer;
+        transition: 0.2s;
+    }
+
+    nav ul label:hover {
+        background: #8ac007;
+    }
+
+    nav ul .content {
+        display: none;
+        position: absolute;
+        left: 0;
+        top: 45px;
+        padding: 15px 25px 60px;
+        width: 100%;
+        overflow: hidden;
+        line-height: 170%;
+        background: #8ac007;
+        border-radius: 0 15px 0 0;
+    }
+
+    nav ul [id^="tab"]:checked ~[id^="tab-content"] {
+        display: block;
+    }
+
+    h3 {
+        margin: 10px 0 30px 0;
+        font-size: 1.25em;
+        font-style: italic;
+        color: #000;
+    }
+
+    nav ul [id^="tab"]:checked + label {
+        top: 6px;
+        padding: 14px;
+        background: #8ac007;
+    }
+</style>
+</head>
+
+<body>
+<div class="container">
+	<h1 class="title">Pure CSS Horizontal Tabs2</h1>
+	<nav>
+		<ul>
+			<li>
+				<input type="radio" name="tabs" id="tab1" checked>
+				<label for="tab1">HTML</label>
+				<div id="tab-content1" class="content">
+					<h3>HTML(5) Tutorial :</h3>
+					<p>
+						With HTML you can create your own Web site.<br>
+						This tutorial teaches you everything about HTML.<br>
+						HTML is easy to learn - You will enjoy it.
+					</p>
+				</div>
+			</li>
+			<li>
+				<input type="radio" name="tabs" id="tab2">
+				<label for="tab2">CSS</label>
+				<div id="tab-content2" class="content">
+					<h3>CSS Tutorial :</h3>
+					<p>
+						Save a lot of work with CSS!<br>
+						In our CSS tutorial you will learn how to use CSS to control the style and layout of multiple Web pages all at once.
+					</p>
+				</div>
+			</li>
+			<li>
+				<input type="radio" name="tabs" id="tab3">
+				<label for="tab3">JavaScript</label>
+				<div id="tab-content3" class="content">
+					<h3>JavaScript Tutorial :</h3>
+					<p>
+						JavaScript is the programming language of HTML and the Web.<br>
+						Programming makes computers do what you want them to do.<br>
+						JavaScript is easy to learn.<br>
+						This tutorial will teach you JavaScript from basic to advanced.
+					</p>
+				</div>
+			</li>
+			<li>
+				<input type="radio" name="tabs" id="tab4">
+				<label for="tab4">jQuery</label>
+				<div id="tab-content4" class="content">
+					<h3>jQuery Tutorial :</h3>
+					<p>
+						jQuery is a JavaScript Library.<br>
+						jQuery greatly simplifies JavaScript programming.<br>
+						jQuery is easy to learn.
+					</p>
+				</div>
+			</li>
+		</ul>
+	</nav>
+</div>
+</body>
+</html>

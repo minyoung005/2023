@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>그레디언트 메뉴</title>
+    <style>
+        #wrapper {
+            width: 800px;
+            height: 45px;
+            background: linear-gradient(to top, #ccc, #999);
+            border-radius: 15px;
+        }
+
+        .meun {
+            width: 100%;
+            overflow: hidden;
+            margin: 0 auto;
+            /* border: 1px solid red; */
+            padding-left: 5%;
+        }
+
+        a {
+            text-decoration: none;
+            color: #fff;
+            text-shadow: 2px 2px 1px rgba(0,0,0,.3);
+            line-height: 45px;
+            width: 18%;
+            display: block;
+            float: left;
+            text-align: center;
+            /* border: 1px solid black; */
+        }
+        a:hover {
+            background: linear-gradient(to top, hsl(78, 70%, 55%),#8ac007);
+        }
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <div class="meun">
+            <a href="#">Products</a>
+            <a href="#">Business</a>
+            <a href="#">Support</a>
+            <a href="#">Download</a>
+            <a href="#">Company</a>
+        </div>
+    </div>
+    
+</body>
+</html>

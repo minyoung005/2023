@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Responsive Placeholder Search with CSS3</title>
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+<!--[if lt IE 9]>
+<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<link rel="stylesheet" type="text/css" href="css/ie8.css">
+<![endif]-->
+<!-- http://fortawesome.github.io/Font-Awesome/icons/ -->
+<style>
+    .search {
+        padding: 80px 0;
+        text-align: center;
+        background: #333;
+    }
+
+    .title {
+        margin: 0 0 25px;
+        font-size: 1.25em;
+        color: #fff;
+    }
+
+    .form {
+        display: inline-block;
+        margin: 0 0 25px;
+    }
+
+    .email {
+        float: left;
+        margin: 0 0 0 10px;
+        padding: 15px;
+        width: 400px;
+        height: 50px;
+        line-height: 1.1; /*110%로 줘도 상관 x*/
+        font-size: 1.125em;
+        background: #fff;
+        color: #333;
+        border: 1px solid #fff;
+        border-radius: 5px;
+        box-sizing: border-box;
+        transition: 0.2s;
+    }
+
+    .email:hover {
+        border: 1px solid #666;
+        box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+    }
+
+    .search_button {
+        display: block;
+        float: left;
+        margin: 0 10px;
+        width: 80px;
+        height: 50px;
+        text-align: center;
+        text-decoration: none;
+        font-family: FontAwesome;
+        font-size: 25px;
+        background: #333;
+        color: #fff;
+        border: 1px solid #666;
+        border-radius: 5px;
+        box-sizing: border-box;
+        transition: 0.2s;
+    }
+
+    .search_button:hover {
+        background: #fff;
+        color: #666;
+    }
+
+    .form .search_button:after {
+        content: "\f00e";
+        display: inline-block;
+        padding-top: 12px;
+    }
+
+    @media(max-width:767px) {
+        .email {
+            width: 200px;
+        }
+        /*768은 컴퓨터 웹사이트 기준.*/
+    }
+    @media(max-width: 479px) {
+        .email {
+            margin-bottom: 10px;
+            width: 100%;
+            text-align: center;
+        }
+        /*480기준은 모바일*/
+        .search_button {
+            width: 100%;
+        }
+    }
+</style>
+</head>
+
+<body>
+<section class="search">
+	<div class="wrap">
+		<div class="title">Responsive example</div>
+		<div class="form">
+			<form>
+				<input type="email" placeholder="Custom Search" class="email">
+				<a href="#none" class="search_button"></a>
+			</form>
+		</div>
+	</div>
+</section>
+</body>
+</html>

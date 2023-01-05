@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가상요소 메뉴 #2</title>
+    <style>
+        body{ 
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1em;
+            background: #333;
+        }
+
+        nav a {
+            display: inline-block;
+            position: relative;
+            margin: 15px 10px;
+            text-decoration: none;
+            color: #fff;
+            outline: none;
+        }
+
+        .effect10 a {
+            color: #8ac007;
+        }
+
+        .effect10 a:before {
+            content: attr(data-hover);
+            position: absolute;
+            color: #fff;
+            transition: 0.3s;
+        }
+
+        .effect10 a:hover:before {
+            opacity: 0;
+            transform: scale(0.9);
+        }
+    </style>
+</head>
+<body>
+    <nav class="effect10">
+        <a href="#" data-hover="HTML">HTML</a>
+        <a href="#" data-hover="CSS">CSS</a>
+        <a href="#" data-hover="JavaScript">JavaScript</a>
+        <a href="#" data-hover="jQuery">jQuery</a>
+        <a href="#" data-hover="References">References</a>
+    </nav>
+</body>
+</html>
+​

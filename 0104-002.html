@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가상요소 메뉴만들기2</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1em;
+            background: #333;
+        }
+
+        nav a {
+            display: inline-block;
+            position: relative;
+            margin: 15px 10px;
+            text-decoration: none;
+            color: #fff;
+            outline: none;
+        }
+
+        .effect2 a {
+            padding: 0 10px;
+            overflow: hidden;
+        }
+
+        .effect2 a span {
+            display: inline-block;
+            position: relative;
+            transition: 0.3s;
+        }
+
+        .effect2 a span::before {
+            content: attr(data-hover);
+            position: absolute;
+            top: 100%;
+            font-weight: 600;
+        }
+
+        .effect2 a:hover span {
+            transform: translatey(-100%);
+        }
+    </style>
+</head>
+<body>
+    <nav class="effect2">
+        <a href="#"><span data-hover="HTML">HTML</span></a>
+        <a href="#"><span data-hover="CSS">CSS</span></a>
+        <a href="#"><span data-hover="JavaScript">JavaScript</span></a>
+        <a href="#"><span data-hover="jQuery">jQuery</span></a>
+        <a href="#"><span data-hover="References">References</span></a>
+    </nav>
+
+</body>
+</html>

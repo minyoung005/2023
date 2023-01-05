@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1em;
+            background: rgb(104, 101, 101);
+        }
+        nav a {
+            display: inline-block;
+            position: relative;
+            text-decoration: none;
+            border: 1px solid black;
+            width: auto;
+            text-align: center;
+            margin: 20px 20px;
+            color: #fff;
+        }
+
+        .effect4 a::before {
+            transition: 0.3s;
+            position: absolute;
+            display: block;
+            background: #fff;
+        }
+
+        .effect4 a:hover::before {
+            position: absolute;
+            top: 100%;
+        }
+        .effect4 a::after {
+            display: block;
+            transition: 0.3s;
+            position: absolute;
+        }
+
+        .effect4 a:hover::after {
+            transform: translatey(-100%);
+            border: 1px solid #fff;
+        }
+    </style>
+</head>
+<body>
+    <nav class="effect4">
+        <a href="#">HTML</a>        
+        <a href="#">CSS</a>        
+        <a href="#">JavaScript</a>       
+        <a href="#">jQuery</a>       
+        <a href="#">References</a>
+        </nav>
+</body>
+</html>

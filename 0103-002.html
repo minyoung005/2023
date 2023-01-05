@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>애플메뉴</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1em;
+            background: #f1f1f1;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            padding: 0 0 0 50px;
+            width: 250px;
+            height: 100%;
+            overflow: hidden;
+            z-index: 9999;
+            background: #fff;
+            box-shadow: 1px 1px 5px rgba(0,0,0,0.5);
+        }
+
+        .logo {
+            margin-top: 100px;
+        }
+
+        .logo a {
+            text-decoration: none;
+            font-size: 1.125em;
+            font-weight: 600;
+            color: #555;
+        }
+
+        header nav ul {
+            margin-top: 50px;
+            list-style: none;
+            overflow: hidden;
+            transition: 0.5s;
+        }
+
+        header nav ul li {
+            margin-bottom: 20px;
+        }
+
+        header nav ul li a {
+            text-decoration: none;
+            color: #555;
+        }
+
+        header .mobile_tab {
+            display: none;
+            position: absolute;
+            right: 0;
+            top: 0;
+            margin: 28px 20px 0 0;
+            width: 40px;
+            height: 40px;
+            background: url(toggle_button.png);
+        }
+
+        header .mobile_tab.close {
+            background-position: -41px 0;
+        }
+
+        @media(max-width: 500px) {
+            header {
+                position: relative;
+                padding: 0;
+                width: 100%;
+                height: 100px;
+            }
+
+            .logo {
+                margin: 40px 0 0 30px;
+            }
+
+            header .mobile_tab {
+                display: block;
+            }
+
+            header nav ul {
+                margin-top: 35px;
+                height: 0;
+            }
+
+            header nav ul li {
+                margin-bottom: 0;
+                color: #000;
+            }
+
+            header nav ul li a {
+                padding: 25px;
+                padding-right: 0;
+                width: 100%;
+                text-align: left;
+                background: #fff;
+                color: #555;
+                border-top: 1px solid #d8d8d8;
+            }
+
+            header nav ul.show {
+                height: 335px;
+                display: block;
+            }
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+        $(function(){
+            $(".mobile_tab").on("click", function(){
+                $("header nav ul").toggleClass("show");
+                $(".mobile_tab").toggleClass("close");
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <a href="#">Basic Responsive Menu</a>
+            </div>
+            <a href="#" class="mobile_tab"></a>
+            <nav>
+                <ul>
+                    <li><a href="#">learn HTML5</a></li>
+                    <li><a href="#">learn CSS3</a></li>
+                    <li><a href="#">learn Responsive</a></li>
+                    <li><a href="#">learn JavaScript</a></li>
+                    <li><a href="#">learn jQuery</a></li>
+                </ul>
+            </nav>
+        </header>
+    </div>
+</body>
+</html>

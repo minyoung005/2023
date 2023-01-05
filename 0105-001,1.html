@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가상요소 메뉴만들기4</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1.5em;
+            background: gray;
+        }
+
+        nav a {
+            display: inline-block;
+            position: relative;
+            margin: 15px 10px;
+            text-decoration: none;
+            color: #fff;
+            outline: none;
+        }
+
+        .effect4 a {
+            padding: 10px 20px;
+           
+        }
+
+        .effect4 a::before,
+        .effect4 a::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 3px solid black;
+            transition: 0.3s;
+        }
+
+        .effect4 a::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 3px solid #fff;
+            opacity: 0;
+            transform: translatey(7px) translatex(-6px);
+        }
+
+        .effect4 a:hover::after {
+            opacity: 1;
+            transform: translatey(0) translatex(0);
+        }
+
+        
+    </style>
+
+</head>
+<body>
+    <nav class="effect4">
+        <a href="#">HTML</a>       
+        <a href="#">CSS</a>        
+        <a href="#">JavaScript</a>      
+        <a href="#">jQuery</a>    
+        <a href="#">References</a>
+    </nav>
+    
+</body>
+</html>
